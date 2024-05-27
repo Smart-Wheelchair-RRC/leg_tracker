@@ -29,6 +29,8 @@ add_message_files(
   PersonArray.msg
   Leg.msg
   LegArray.msg
+  PersonVelocity.msg
+  PeopleVelocity.msg
 )
 
 generate_messages(   
@@ -39,7 +41,7 @@ generate_messages(
 
 
 catkin_package(
-  CATKIN_DEPENDS message_runtime
+  CATKIN_DEPENDS message_runtime std_msgs
 )
 
 
@@ -119,9 +121,3 @@ install(
   PROGRAMS scripts/individual_leg_tracker.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-
-
-
-
-
-
